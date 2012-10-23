@@ -27,10 +27,10 @@ from some remote repository like https://github.com/JuliaLang/METADATA.jl.git,
 which is the default metadata repo. This is the only submodule in the package
 repo that is *not* a itself package (that would cause a bootstrapping issue).
 
-`REQUIRE` is a text file specifying the required packages and versions for
-the package repo. Each line specifies a set of required package versions in
-the format `pkg v1 v2 ...` where pkg is the name of a package and v1, v2, etc.
-are zero or more ascending version numbers in semver.org format. On a line by
+`REQUIRE` is a text file specifying the required packages and versions for the
+package repo. Each line specifies a set of required package versions in the
+format `pkg v1 v2 ...` where pkg is the name of a package and v1, v2, etc. are
+zero or more ascending version numbers in semver.org format. On a line by
 itself, `pkg` means any version; `pkg v1` means any version ≤ v1; `pkg v1 v2`
 means any version ≥ v1 and < v2; `pkg v1 v2 v3` means any version ≤ v1 and <
 v2 or ≤ v3; and so on. Blank lines are ignored and `#` begins a comment. You
@@ -76,21 +76,20 @@ business is obviously creating some package repos and putting metadata about
 them in there so that people can automatically install them using the package
 manager.
 
-`Pkg.origin([ url ])`: get or set the remote origin URL that the package
-repo pushes to and pulls from. Without a URL argument, it returns the current
-value (or nothing if it isn't set, which is the initial state).
+`Pkg.origin([ url ])`: get or set the remote origin URL that the package repo
+pushes to and pulls from. Without a URL argument, it returns the current value
+(or nothing if it isn't set, which is the initial state).
 
-`Pkg.push()`: push package repo state to the remote origin URL. This
-basically wraps an underlying git call with a little other stuff.
+`Pkg.push()`: push package repo state to the remote origin URL. This basically
+wraps an underlying git call with a little other stuff.
 
-`Pkg.pull()`: pull package repo state from the remote origin URL. Unlike
-push, this is a fairly sophisticated routine that not only pulls state from
-the remote repo, but also attempts to do intelligent merging when both sides
-have diverged in various ways. It should hopefully generally Just Work™.
+`Pkg.pull()`: pull package repo state from the remote origin URL. Unlike push,
+this is a fairly sophisticated routine that not only pulls state from the
+remote repo, but also attempts to do intelligent merging when both sides have
+diverged in various ways. It should hopefully generally Just Work™.
 
-`Pkg.clone(url)`: clone an existing package repo from a git URL. This ought
-to set things up so that repo is the remote origin that you push and pull
-from.
+`Pkg.clone(url)`: clone an existing package repo from a git URL. This ought to
+set things up so that repo is the remote origin that you push and pull from.
 
 ### Managing installed packages.
 
@@ -113,11 +112,11 @@ necessary to satisfy these requirements. This will typically result in
 installing the requested packages and their dependencies, but can also result
 in upgrading, downgrading, and even uninstalling of other packages.
 
-`Pkg.rm(pkgs...)`: remove the listed packages by name from the `REQUIRE`
-file and re-resolve the set of packages necessary to satisfy these
-requirements. This will typically result in uninstalling the named packages
-and their dependencies which are no longer necessary, but can also result in
-upgrading, downgrading, and installing of other packages.
+`Pkg.rm(pkgs...)`: remove the listed packages by name from the `REQUIRE` file
+and re-resolve the set of packages necessary to satisfy these requirements.
+This will typically result in uninstalling the named packages and their
+dependencies which are no longer necessary, but can also result in upgrading,
+downgrading, and installing of other packages.
 
 `Pkg.resolve()`: computes the necessary set of package versions based on the
 current `METADATA` and `REQUIRE`, then installs, uninstalls, upgrades and
@@ -132,7 +131,7 @@ update the installed packages.
 message. This is necessary when you have edited the `REQUIRE` file manually
 and then want to call resolve() to update the installed packages to match.
 
-`Pkg.update()`: fetches new `METADATA` and any new versions upstream repos
-of installed packages. Then does a resolve() to update the collection of
+`Pkg.update()`: fetches new `METADATA` and any new versions upstream repos of
+installed packages. Then does a resolve() to update the collection of
 installed packages to the latest and greatest set that satisfies the
 requirements in `REQUIRE` (which remain the same).
