@@ -31,9 +31,9 @@ repo that is *not* a itself package (that would cause a bootstrapping issue).
 package repo. Each line specifies a set of required package versions in the
 format `pkg v1 v2 ...` where pkg is the name of a package and v1, v2, etc. are
 zero or more ascending version numbers in semver.org format. On a line by
-itself, `pkg` means any version; `pkg v1` means any version ≤ v1; `pkg v1 v2`
-means any version ≥ v1 and < v2; `pkg v1 v2 v3` means any version ≤ v1 and <
-v2 or ≤ v3; and so on. Blank lines are ignored and `#` begins a comment. You
+itself, `pkg` means any version; `pkg v1` means any version ≥ v1; `pkg v1 v2`
+means any version ≥ v1 and < v2; `pkg v1 v2 v3` means any version ≥ v1 and <
+v2 or ≥ v3; and so on. Blank lines are ignored and `#` begins a comment. You
 can maintain the `REQUIRE` file by hand but there are `Pkg.add` and `Pkg.rm`
 commands which will add and remove packages from the file and update packages
 afterwards. If there is more than one line for a given package in the
