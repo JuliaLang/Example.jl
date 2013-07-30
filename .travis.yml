@@ -14,4 +14,4 @@ script:
     - julia -e "Pkg.init()"
     - mkdir -p ~/.julia/Example
     - cp -R ./* ~/.julia/Example/
-    - julia ~/.julia/Example/test/test.jl
+    - julia ~/.julia/Example/test/runtests.jl TEST
