@@ -8,10 +8,7 @@ before_install:
     - sudo add-apt-repository ppa:staticfloat/julianightlies -y
     - sudo apt-get update -qq -y
     - sudo apt-get install libpcre3-dev julia -y
-    - git config --global user.name "Travis User"
-    - git config --global user.email "travis@example.net"
 script:
-    - julia -e "Pkg.init()"
-    - mkdir -p ~/.julia/Example
-    - cp -R ./* ~/.julia/Example/
-    - julia ~/.julia/Example/test/runtests.jl TEST
+    - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir())/`); Pkg.resolve()'
+    - julia -e 'using Example; @assert isdefined(:Example); @assert typeof(Example) === Module'
+    - julia test/runtests.jl TEST
