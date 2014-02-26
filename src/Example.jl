@@ -1,10 +1,6 @@
 module Example
+export hello
 
-importall Base
+hello(who::ASCIIString = "world") = println("Hello, $who")
 
-hello(who::ASCIIString) = "Hello, $who"
-helloworld() = println(hello("World"))
-
-domath(x::Number) = (x + 5)
-
-end
+end # module
