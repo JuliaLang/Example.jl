@@ -1,6 +1,7 @@
 module Example
-export hello
+export hello, domath
 
-hello(who::ASCIIString = "world") = println("Hello, $who")
+hello(who::String) = "Hello, $who"
+domath(x::Number) = (x + 5)
 
-end # module
+end
