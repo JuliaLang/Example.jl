@@ -1,7 +1,7 @@
 Example Julia package repo.
 
-[![Example](http://pkg.julialang.org/badges/Example_0.3.svg)](http://pkg.julialang.org/?pkg=Example&ver=0.3)
-[![Example](http://pkg.julialang.org/badges/Example_0.4.svg)](http://pkg.julialang.org/?pkg=Example&ver=0.4)
+[![Example](http://pkg.julialang.org/badges/Example_0.4.svg)](http://pkg.julialang.org/?pkg=Example)
+[![Example](http://pkg.julialang.org/badges/Example_0.5.svg)](http://pkg.julialang.org/?pkg=Example)
 
 Linux: [![Build Status](https://travis-ci.org/JuliaLang/Example.jl.svg?branch=master)](https://travis-ci.org/JuliaLang/Example.jl)
 
