@@ -5,6 +5,6 @@ makedocs(modules = [Example])
 if get(ENV, "TEST_DOCS", "false") != "true"
     deploydocs(
         repo = "github.com/JuliaLang/Example.jl.git",
-        julia = "0.6"
+        julia = "1.0"
     )
 end
