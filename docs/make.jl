@@ -1,3 +1,5 @@
+using Documenter, Example
+
 makedocs(format = Documenter.HTML(),
          modules = [Example],
          sitename = "Example.jl",
