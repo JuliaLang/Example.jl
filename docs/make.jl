@@ -1,7 +1,15 @@
-using Documenter, Example
+using Documenter, Weave, Example
 
-makedocs(modules = [Example], sitename = "Example.jl")
+for file ∈ readdir(joinpath(dirname(pathof(Econometrics)), "..", "docs", "jmd"))
+      weave(joinpath(dirname(pathof(Econometrics)), "..", "docs", "jmd", file),
+            out_path = joinpath(dirname(pathof(Econometrics)), "..", "docs", "src"),
+            doctype = "github")
+end
 
-deploydocs(
-    repo = "github.com/JuliaLang/Example.jl.git",
-)
+makedocs(format = Documenter.HTML(),
+         modules = [Example],
+         sitename = "Example.jl",
+         pages = ["Introduction" => "index.md"]
+    )
+
+deploydocs(repo = "github.com/JuliaLang/Example.jl.git")

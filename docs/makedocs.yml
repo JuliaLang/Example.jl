@@ -1,0 +1,6 @@
+site_name:        Example.jl
+repo_url:         https://github.com/JuliaLang/Example.jl
+site_description: Example Docs
+site_author:      JuliaLang
+
+theme: material
