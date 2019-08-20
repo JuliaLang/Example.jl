@@ -4,8 +4,10 @@ os:
   - osx
   - windows
 julia:
+  - 1.0
   - 1.2
   - nightly
+codecov: true
 notifications:
   email: false
 jobs:
