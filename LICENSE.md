@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2013-2014 Stefan Karpinski, Iain Dunning, Et al.
+Copyright (c) 2013-2014 Stefan Karpinski, Iain Dunning, et al.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
