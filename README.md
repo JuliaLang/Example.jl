@@ -7,5 +7,7 @@ Linux and macOS: [![Build Status](https://travis-ci.org/JuliaLang/Example.jl.svg
 
 Windows: [![Build Status](https://ci.appveyor.com/api/projects/status/github/JuliaLang/Example.jl?branch=master&svg=true)](https://ci.appveyor.com/project/tkelman/example-jl/branch/master)
 
+Github Actions: ![Build status](https://github.com/JuliaLang/Example.jl/workflows/Run%20tests/badge.svg)
+
 [![Coverage Status](https://coveralls.io/repos/JuliaLang/Example.jl/badge.svg?branch=master)](https://coveralls.io/r/JuliaLang/Example.jl?branch=master)
 [![codecov.io](http://codecov.io/github/JuliaLang/Example.jl/coverage.svg?branch=master)](http://codecov.io/github/JuliaLang/Example.jl?branch=master)
