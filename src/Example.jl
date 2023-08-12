@@ -1,5 +1,5 @@
 module Example
-export hello, domath
+export hello, domath, ispositive
 
 """
     hello(who::String)
@@ -14,5 +14,12 @@ hello(who::String) = "Hello, $who"
 Return `x + 5`.
 """
 domath(x::Number) = x + 5
+
+"""
+    ispositive(y::Number)
+
+Return if 'y > 0'.
+"""
+ispositve(y::Number) = y > 0 && "$y is positive."
 
 end
