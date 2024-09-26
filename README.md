@@ -6,3 +6,6 @@ Example Julia package repo.
 GitHub Actions : [![Build Status](https://github.com/JuliaLang/Example.jl/workflows/CI/badge.svg)](https://github.com/JuliaLang/Example.jl/actions?query=workflow%3ACI+branch%3Amaster)
 
 [![codecov](https://codecov.io/gh/JuliaLang/Example.jl/graph/badge.svg?token=yY3RYoqwbn)](https://codecov.io/gh/JuliaLang/Example.jl)
+
+[pkgeval-img]: https://juliaci.github.io/NanosoldierReports/pkgeval_badges/E/Example.svg
+[pkgeval-url]: https://juliaci.github.io/NanosoldierReports/pkgeval_badges/E/Example.html
