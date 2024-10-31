@@ -1,18 +1,5 @@
 module Example
-export hello, domath
 
-"""
-    hello(who::String)
+error("Intentionally throw error when trying to precompile or load this package")
 
-Return "Hello, `who`".
-"""
-hello(who::String) = "Hello, $who"
-
-"""
-    domath(x::Number)
-
-Return `x + 5`.
-"""
-domath(x::Number) = x + 5
-
-end
+end # module
